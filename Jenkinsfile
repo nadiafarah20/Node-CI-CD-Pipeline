@@ -9,6 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/username/node-ci-cd.git'
+                credentialsId: 'github-credentials'
             }
         }
 
